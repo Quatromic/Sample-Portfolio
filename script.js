@@ -51,26 +51,26 @@ timeline.fromTo('.title',{
         scrollTrigger:{
             scrub:true
         },
-        x:200
+        x:100
     })
     .from("#info2",{
         delay:1,
         scrollTrigger:{
             scrub:true
         },
-        x:200
+        x:100
     })
     .from('#img1',{
         scrollTrigger:{
             scrub:true
         },
-        x:-200
+        x:-100
     })
     .from('#img2',{
         scrollTrigger:{
             scrub:true
         },
-        x:200
+        x:100
     })
 
 /*Quotes */
@@ -111,7 +111,7 @@ function sendEmail(){
             publicKey: 'quodMm74t9sYgpRTo',
         })
     })()
-
+        
     var params = {
         from_name: document.querySelector("#name").value,
         to_name:"lawrence muchiri",

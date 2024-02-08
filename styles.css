@@ -178,6 +178,12 @@
     color:white;
     cursor: pointer;
 }
+#socials div i{
+    transition: color .5s ease-in-out;
+}
+#socials div:hover i{
+    color:white
+}
 #socials div p{
     font-size:medium !important;
     font-family:"Dancing Script",sans-serif;
@@ -187,16 +193,6 @@
     position: relative;
     top:150px;
 }
-/*
-#divider{
-    position: absolute;
-    left:50%;
-    top:0;
-    height:100%;
-    width:1px;
-    background-color: black;
-    border-top-right-radius: 15px;
-}*/
 #container input{
     margin-top:10px;
     margin-bottom:40px;
@@ -205,6 +201,7 @@
     margin-top:15px;
     border-radius: 15px;
     width:280px;
+    padding:10px;
 }
 #container button{
     padding:10px;
