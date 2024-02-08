@@ -102,4 +102,22 @@ function raf(time) {
   requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf)
+requestAnimationFrame(raf);
+
+//Email sender
+// (function(){
+//     emailjs.init({
+//         publicKey: 'quodMm74t9sYgpRTo',
+//     })
+// })()
+// window.onload = () => {
+//     document.querySelector("#contact_form").addEventListener("submit",(event) => {
+//         event.preventDefault()
+//         emailjs.sendForm('contact_service', '#contact_form', this)
+//                         .then(() => {
+//                             console.log('SUCCESS!');
+//                         }, (error) => {
+//                             console.log('FAILED...', error);
+//                         });
+//     })
+// }

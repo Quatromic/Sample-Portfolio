@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://kit.fontawesome.com/9e14e23008.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Simple portfolio</title>
 </head>
 <body>
@@ -103,20 +104,20 @@
     <div id="contact">
         <div id="container">
             <p>Get in touch:</p>
-            <form>
+            <form id="contact_form">
                 <label>Name: </label>
                 <br>
-                <input type="text" placeholder="Your name">
+                <input id="name" type="text" placeholder="Your name">
                 <br>
                 <label>Email: </label>
                 <br>
-                <input type="email" placeholder="Your email address">
+                <input id="email" type="email" placeholder="Your email address">
                 <br>
                 <label>Anything to say: </label>
                 <br>
-                <textarea></textarea>
+                <textarea id="message"></textarea>
                 <br>
-                <button>Submit</button>
+                <button id="submit">Submit</button>
             </form>
             <div id="divider"></div>
             <div>
@@ -128,5 +129,29 @@
         <p>Created and developed by David Lorenzo</p>
         <p>Copyright &copy; 2024</p>
     </footer>
+
+    <script>
+        function sendEmail(){
+            (function(){
+                emailjs.init({
+                    publicKey: 'quodMm74t9sYgpRTo',
+                })
+            })()
+        
+            var params = {
+                from_name: document.querySelector("#name").value,
+                to_name:"lawrence muchiri",
+                from_email: document.querySelector("#email").value,
+                message:document.querySelector("#message").value
+            }
+            var serviceId = "contact_service"
+            var templateId = "template_vh0lru2"
+
+            emailjs.send(serviceId,templateId,params).then(res => {
+                alert("Email sent")
+            }).catch(error => console.log(error));
+        }
+        document.getElementById("submit").addEventListener("click",sendEmail)
+    </script>
 </body>
 </html>
