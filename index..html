@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="script.js" type="module" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/9e14e23008.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <title>Simple portfolio</title>
+</head>
+<body>
+    <div id="intro">
+        <nav id="nav1">
+            <h1 class="title">David Lorenzo</h1>
+            <p id="date"></p>
+        </nav>
+        <nav id="nav2">
+            <div>
+                <a href="#intro"><span class="material-symbols-outlined">home</span></a>
+                <p id="text">Home</p>
+            </div>
+            <div>
+                <a href="#personal"><span class="material-symbols-outlined">info</span></a>
+                <p id="text">Personal Info</p>
+            </div>
+            <div>
+                <a href="#socials"><span class="material-symbols-outlined">group_add</span></a>
+                <p id="text">My Socials</p>
+            </div>
+            <div>
+                <a href="#contact"><span class="material-symbols-outlined">contact_support</span></a>
+                <p id="text">Contact me</p>
+            </div>
+        </nav>
+        <div id="greetings">
+            <h1>Hey there</h1>
+            <p>I'm David Lorenzo all the way from Brazil.</p>
+            <p>I am a web developer, both deep in front-end and back-end</p>
+            <p> I also commit to working UI/UX development,app development</p>
+            <p style="font-family:Dancing Script,sans-serif">Thank you for visiting</p>
+            <div id="profile">
+                <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?cs=srgb&dl=pexels-mohamed-abdelghaffar-771742.jpg&fm=jpg">
+            </div>
+        </div>
+    </div>
+    <div id="quotes">
+        <p id="quote"></p>
+        <p id="author"></p>
+    </div>
+    <hr class="divider" style="position:relative;bottom:30px;width:60%;">
+    <div id="personal">
+        <div id="home">
+            <img id="img1" src="https://blog.goway.com/globetrotting/wp-content/uploads/2018/06/Pelourinho-District-in-Salvador-da-Bahia-Brazil-_567925363.jpg">
+            <div id="info1">
+                <p>I was born in the outskirts of Brazil</p>
+                <p>Where i grew up to who i am now</p>
+                <p>I have lived and stayed with many who have supported me all the way through</p>
+                <p>And finally their support paid off</p>
+            </div>
+        </div>
+        <div id="career">
+            <img id="img2" src="https://www.queensu.ca/gazette/sites/gazettewww/files/assets/WEB%20Coding%20arnold-francisca-nPhl2x4fk2s-unsplash.jpg">
+            <div id="info2">
+                <p>Then began my coding and programming journey</p>
+                <p>I coded and and programmed day and night</p>
+                <p>To the extent that i became more than aware of my programs</p>
+                <p>Today, i have been able to learn and fully grasp most of what i code</p>
+            </div>
+        </div>
+        <div id="final">
+            <img id="img3" src="https://images.squarespace-cdn.com/content/v1/555b7fd5e4b0c7c58cfd6cf4/1584372252046-LW5QH7CMT434BXRTZP0E/image-asset.jpeg?format=1500w">
+            <div id="info3">
+                <p>Here I am</p>
+            </div>
+        </div>
+    </div>
+    <div id="socials">
+        <div>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <p>Check out my yt channel</p>
+        </div>
+        <div>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <p>Follow me on instagram</p>
+        </div>
+        <div>
+            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+            <p>Check out my pics on snap</p>
+        </div>
+        <div>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <p>Lets talk on Facebook</p>
+        </div>
+        <div>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <p>Check out my repos'</p>
+        </div>
+    </div>
+    <div id="contact">
+        <div id="container">
+            <p>Get in touch:</p>
+            <form>
+                <label>Name: </label>
+                <br>
+                <input type="text" placeholder="Your name">
+                <br>
+                <label>Email: </label>
+                <br>
+                <input type="email" placeholder="Your email address">
+                <br>
+                <label>Anything to say: </label>
+                <br>
+                <textarea></textarea>
+                <br>
+                <button>Submit</button>
+            </form>
+            <div id="divider"></div>
+            <div>
+                <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?cs=srgb&dl=pexels-mohamed-abdelghaffar-771742.jpg&fm=jpg">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Created and developed by David Lorenzo</p>
+        <p>Copyright &copy; 2024</p>
+    </footer>
+</body>
+</html>
