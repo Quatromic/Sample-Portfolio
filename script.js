@@ -126,3 +126,13 @@ function sendEmail(){
     }).catch(error => console.log(error));
 }
 document.getElementById("submit").addEventListener("click",sendEmail)
+
+/*Checking if a user is in the page */
+document.addEventListener("visibilitychange",() => {
+    if(document.visibilityState === "hidden"){
+        document.title = "Out of page"
+    }
+    else{
+        document.title = "Simple portfolio"
+    }
+})
