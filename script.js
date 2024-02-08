@@ -105,19 +105,24 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 //Email sender
-// (function(){
-//     emailjs.init({
-//         publicKey: 'quodMm74t9sYgpRTo',
-//     })
-// })()
-// window.onload = () => {
-//     document.querySelector("#contact_form").addEventListener("submit",(event) => {
-//         event.preventDefault()
-//         emailjs.sendForm('contact_service', '#contact_form', this)
-//                         .then(() => {
-//                             console.log('SUCCESS!');
-//                         }, (error) => {
-//                             console.log('FAILED...', error);
-//                         });
-//     })
-// }
+function sendEmail(){
+    (function(){
+        emailjs.init({
+            publicKey: 'quodMm74t9sYgpRTo',
+        })
+    })()
+
+    var params = {
+        from_name: document.querySelector("#name").value,
+        to_name:"lawrence muchiri",
+        from_email: document.querySelector("#email").value,
+        message:document.querySelector("#message").value
+    }
+    var serviceId = "contact_service"
+    var templateId = "template_vh0lru2"
+
+    emailjs.send(serviceId,templateId,params).then(res => {
+        alert("Email sent")
+    }).catch(error => console.log(error));
+}
+document.getElementById("submit").addEventListener("click",sendEmail)
